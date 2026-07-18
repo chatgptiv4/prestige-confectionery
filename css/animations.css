@@ -56,28 +56,6 @@ html.lenis, html.lenis body {
     transform: translateY(100%);
 }
 
-/* Menu Card Entrance */
-.menu-card {
-    opacity: 0;
-    transform: translateY(40px);
-}
-
-.menu-card.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Gallery Item Entrance */
-.gallery-item {
-    opacity: 0;
-    transform: scale(0.8);
-}
-
-.gallery-item.visible {
-    opacity: 1;
-    transform: scale(1);
-}
-
 /* Testimonial Card Transition */
 .testimonial-card {
     transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
@@ -486,7 +464,7 @@ html.lenis, html.lenis body {
 
 /* Smooth Image Loading */
 img {
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.3s ease;
 }
 

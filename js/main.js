@@ -316,7 +316,7 @@ function initMenuFilters() {
                         opacity: 1,
                         scale: 1,
                         duration: 0.4,
-                        display: 'block'
+                        display: ''
                     });
                 } else {
                     gsap.to(card, {
@@ -353,7 +353,7 @@ function initGalleryFilters() {
                         opacity: 1,
                         scale: 1,
                         duration: 0.4,
-                        display: 'block'
+                        display: ''
                     });
                 } else {
                     gsap.to(item, {
