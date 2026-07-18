@@ -28,6 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
 // Lenis Smooth Scroll
 // ============================================
 function initLenis() {
+    if (window.matchMedia('(pointer: coarse)').matches || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (typeof Lenis === 'undefined' || typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+
     const lenis = new Lenis({
         duration: 1.2,
         easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -464,7 +467,7 @@ Please let me know the next steps.`;
         // Open WhatsApp after delay
         setTimeout(() => {
             const encodedMessage = encodeURIComponent(whatsappMessage);
-            window.open(`https://wa.me/2340000000000?text=${encodedMessage}`, '_blank');
+            window.open(`https://wa.me/2349074106868?text=${encodedMessage}`, '_blank');
         }, 1500);
     });
 
@@ -605,6 +608,8 @@ function initMagneticButtons() {
 // GSAP Animations
 // ============================================
 function initGSAPAnimations() {
+    if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+
     gsap.registerPlugin(ScrollTrigger);
 
     // Hero entrance animation
@@ -780,10 +785,18 @@ function initGSAPAnimations() {
 // Image Lazy Loading
 // ============================================
 document.addEventListener('DOMContentLoaded', () => {
-    const images = document.querySelectorAll('img[loading="lazy"]');
+    const images = document.querySelectorAll('img');
     
     images.forEach(img => {
+        if (img.complete) {
+            img.classList.add('loaded');
+        }
+
         img.addEventListener('load', () => {
+            img.classList.add('loaded');
+        });
+
+        img.addEventListener('error', () => {
             img.classList.add('loaded');
         });
     });

@@ -100,7 +100,7 @@ npx serve .
 
 #### Update Brand Information
 Edit `index.html`:
-- Replace placeholder phone number (`2340000000000`) with actual WhatsApp number
+- Replace placeholder phone number (`2349074106868`) with actual WhatsApp number
 - Update social media links
 - Add real business location
 
@@ -136,7 +136,7 @@ Edit `css/main.css`:
 Ensure you have a WhatsApp Business account with a dedicated phone number.
 
 ### 2. Update All Links
-Replace `2340000000000` with your actual number in:
+Replace `2349074106868` with your actual number in:
 - `index.html` — All WhatsApp links
 - `js/main.js` — Form submission handler
 
