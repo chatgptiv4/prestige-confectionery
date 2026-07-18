@@ -710,6 +710,10 @@ section {
     .hero-actions {
         flex-direction: column;
     }
+
+    .hero-actions .btn {
+        width: 100%;
+    }
     
     .hero-stats {
         flex-direction: column;
@@ -1942,6 +1946,25 @@ section {
     .footer-content {
         grid-template-columns: 1fr;
         gap: var(--space-8);
+    }
+
+    @media (max-width: 480px) {
+        .mobile-nav-link {
+            font-size: var(--text-2xl);
+        }
+
+        .contact-method {
+            align-items: flex-start;
+        }
+
+        .contact-value {
+            font-size: var(--text-base);
+            overflow-wrap: anywhere;
+        }
+
+        .newsletter-form {
+            flex-direction: column;
+        }
     }
     
     .footer-bottom {
